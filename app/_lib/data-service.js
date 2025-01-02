@@ -9,3 +9,13 @@ export async function getAllProjects() {
   }
   return data;
 }
+export async function getProjectBySlugName(slug) {
+  const { data, error } = await supabase
+    .from("project")
+    .select("*")
+    .eq("slug_name", slug);
+  if (error) {
+    console.log(error);
+  }
+  return data;
+}

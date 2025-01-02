@@ -5,15 +5,13 @@ import Form from "./Form";
 
 export default function Sidebar() {
   return (
-    <div className="max-h-screen p-4 flex flex-col items-center justify-between py-9">
-      <div className="flex flex-col items-center">
+    <div className="p-4 flex flex-col items-center justify-between md:h-screen py-6 md:py-9">
+      <div className="flex flex-col items-center w-full">
         <UserImage />
         <UserDetails />
       </div>
 
-      <div className="mt-auto w-full">
-        {" "}
-        {/* mt-auto makes the form stick at the bottom */}
+      <div className="mt-6 md:mt-auto w-full">
         <Form />
       </div>
     </div>

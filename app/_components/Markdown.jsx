@@ -18,7 +18,7 @@ export const Markdown = ({ text }) => {
         result.push(
           <h1
             key={index}
-            className="text-3xl font-bold my-6"
+            className="text-3xl font-bold my-6 "
             id={`heading-${index}`}
           >
             {processText(line.slice(2))}
@@ -30,7 +30,7 @@ export const Markdown = ({ text }) => {
         result.push(
           <h2
             key={index}
-            className="text-2xl font-semibold my-4"
+            className="text-2xl font-semibold my-4 "
             id={`heading-${index}`}
           >
             {processText(line.slice(3))}

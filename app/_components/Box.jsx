@@ -10,6 +10,7 @@ export default function Box({
   project_desc,
   project_created_on,
   product_link,
+  slug_name,
 }) {
   // Function to get the day with the correct suffix (1st, 2nd, 3rd, etc.)
   const getDaySuffix = (day) => {
@@ -35,9 +36,11 @@ export default function Box({
         className="h-48 object-cover w-auto"
         alt="project image"
       />
-      <h1 className="font-semibold tracking-wide text-xl underline underline-offset-2 hover:text-stone-400 cursor-pointer transition-all duration-150">
-        {project_name} &mdash; {project_short_desc}
-      </h1>
+      <Link href={`/project/${slug_name}`}>
+        <h1 className="font-semibold tracking-wide text-xl underline underline-offset-2 hover:text-stone-400 cursor-pointer transition-all duration-150">
+          {project_name} &mdash; {project_short_desc}
+        </h1>
+      </Link>
       <Link
         className="text-xs flex items-center gap-2 text-stone-300 hover:underline"
         href={product_link}
