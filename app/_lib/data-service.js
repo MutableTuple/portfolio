@@ -19,3 +19,8 @@ export async function getProjectBySlugName(slug) {
   }
   return data;
 }
+export async function getUpdate() {
+  const { data, error } = await supabase.from("my_update").select("*");
+
+  return data;
+}
